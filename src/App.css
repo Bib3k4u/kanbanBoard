@@ -63,3 +63,37 @@ h2 {
 .kanban-column > .todo-drop-target {
   background-color: #e6ffe6;
 }
+
+
+.drop{
+  width: 200px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropItem{
+  width: 20px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+}
+.option{
+  width: 100px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+}

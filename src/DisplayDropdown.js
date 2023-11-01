@@ -24,16 +24,16 @@ class DisplayDropdown extends Component {
 
   render() {
     return (
-      <div>
-        <label htmlFor="displayDropdown">Icon:</label>
-        <select
+      <div className='drop'>
+        <label className='dropItem' htmlFor="displayDropdown"><img height={"15px"} src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1zSOFlVlwiyH2JJrtMjGE-p8q9pJXcpGeuQ&usqp=CAU"/></label>
+        <select  className='option'
           id="displayDropdown"
           value={this.state.displayValue}
           onChange={this.handleDisplayChange}
         >
-          <option value="Select Display">Display</option>
-          <option value="Status">Status</option>
-          <option value="Priority">Priority</option>
+          <option className='option' value="Select Display">Display</option>
+          <option className='option' value="Status">Status</option>
+          <option className='option' value="Priority">Priority</option>
         </select>
 
         {this.state.displayValue === 'Status' && (
