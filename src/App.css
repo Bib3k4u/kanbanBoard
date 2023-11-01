@@ -1,38 +1,65 @@
-.App {
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.kanban-board-container {
+  overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+  display: flex; /* Add display: flex to create a single row */
+  flex-direction: row; /* Add flex-direction: row to create a single row */
+}
+.kanban-board{
+  display: flex;
+}
+
+.kanban-column {
+  flex: 1;
+  width: 100px; /* You can adjust the minimum width as needed */
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+h2 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styles for the draggable todos */
+/* You can add more styles for the Todo component */
+.Todo {
+  opacity: 1;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+}
+#todo1 {
+  /* background-color: #ff9999; */
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-top{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  /* margin-bottom: -15px; */
+}
+.todo-bottom{
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* margin-top: -15px; */
+  font-size: small;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styling for the active drag-and-drop area */
+.kanban-column > .todo-drop-target {
+  background-color: #e6ffe6;
 }
